@@ -1,0 +1,21 @@
+meta {
+  name: 下发模型
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://192.168.1.213:5451/api/receivetask/xtsw/model-data
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  modelFile: @file(D:\Work\hgzn\河北固安\多目视觉\examp\062（公开）.STEP)
+  qrCode: 12121211112
+  prodFile: @file(D:\Work\hgzn\河北固安\多目视觉\examp\SVFILE02.S2B)
+}
+
+settings {
+  encodeUrl: true
+}

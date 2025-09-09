@@ -1,0 +1,22 @@
+meta {
+  name: 上传测试结果
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:5156/api/receivetask/xtsw/quality
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  PdfFile: @file(C:\Users\en-ye\OneDrive\图片\image_widget_2gq5eymg5obd1.png)
+  HeadContent: 12121211112
+  PhotoFile: @file(C:\Users\en-ye\OneDrive\图片\image_widget_2gq5eymg5obd1.png)
+  qrCode: 1212121
+}
+
+settings {
+  encodeUrl: true
+}

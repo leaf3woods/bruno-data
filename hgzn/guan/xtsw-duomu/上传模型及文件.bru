@@ -1,0 +1,21 @@
+meta {
+  name: 上传模型及文件
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://192.168.1.100:5156/api/receivetask/xtsw/bend-proc
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  modelFile: @file(D:\Work\hgzn\河北固安\多目视觉\examp\062（公开）.STEP)
+  qrCode: 12121211112
+  ~prodFile: @file(D:\Work\hgzn\河北固安\多目视觉\examp\SVFILE02.S2B)
+}
+
+settings {
+  encodeUrl: true
+}
